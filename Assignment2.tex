@@ -1,0 +1,96 @@
+%  Make this into a pdf document as follows:
+%
+%
+% The edit the Report.tex file appropriately to include only those elements that
+% make sense for the assignment you're reporting on.
+%
+% You can use a tool like TeXShop or Texmaker or some other graphical tool
+% to convert Report.text into a pdf file.
+%
+% If you are making this with command line tools, you'd run the following command:
+%
+%     latex Report.tex
+%
+% That will generate a dvi (device independent) document file called Report.dvi
+% The pages reported in the table of contents won't be correct, since latex only
+% processes one pass over the document. To adjust the page numbers in the contents,
+% run latex again:
+%
+%    latex Report.tex
+%
+% Then run
+%
+%   dvipdf Report.dvi
+%
+% to generate Report.pdf
+%
+% You can view this file to check it out by running
+%
+% xdg-open Report.pdf
+%
+% That's it.
+  
+
+\documentclass[notitlepage]{article}
+
+\usepackage{bibunits}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{datetime}
+\usepackage{numprint}
+
+% processes above options
+\usepackage{palatino}  %OR newcent ncntrsbk helvet times palatino
+\usepackage{url}
+\usepackage{footmisc}
+\usepackage{endnotes}
+
+\setcounter{secnumdepth}{0}
+\begin{document}
+
+\nplpadding{2}
+\newdateformat{isodate}{
+  \THEYEAR -\numprint{\THEMONTH}-\numprint{\THEDAY}}
+  
+
+\title{CAP 6615 - Neural Networks \\
+Programming Assignment 2 -- Multi-Layer Perceptron}
+
+\author{1.   Hang Yin\\
+2.   Harsh Soni\\
+3.   Aaditya Prakash\\
+4.   Xiang Yan\\
+5.   Logan Cundiff
+}
+\date{\isodate\today}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{Network parameters}
+
+ \subsection{}
+ 
+
+ 
+\section{Python code}
+
+ \subsection{Introduction}
+
+
+% Include one of these headings for each finding.
+\section{Training, Validation, and Test set configuration}
+
+\section{MLNNs' output results for noiseless input}
+
+\subsection{Fh and Ffa graph }
+\subsection{ROC curves}
+
+
+\section{MLNNs' output results for noise-corrupted input}
+
+\section{Discussion}
+\end{document} 
